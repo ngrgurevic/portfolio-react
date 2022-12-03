@@ -1,23 +1,16 @@
 import React, { useState } from "react";
 import { createTheme, Switch } from "@mui/material";
 import COLORS from "./colors";
+import { ThemeContext } from "../App";
+import "./MySwitch.css";
 
-function MySwitch() {
+function MySwitch(theme,toggleTheme) {
     const [isToggled, setIsToggled] = useState(false);
   
     const onToggle = () => {
       setIsToggled(!isToggled);
     };
-  
-    const Theme = createTheme({
-        
-        palette: {
-            mode: isToggled ? COLORS.primary : COLORS.secondary
-          }
-      });
-
     return (
-       
         <Switch checked={isToggled} onChange={onToggle}/>
     );
   }

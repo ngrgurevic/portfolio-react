@@ -7,6 +7,11 @@ const COLORS = {
     secondary_light: '#c3fdff',
     secondary_dark: '#5d99c6',
     // your colors
+
+    pieColorOne: '#7f0000',
+    pieColorTwo: '#12005e',
+    pieColorThree: '#01579b',
+    pieColorFour: '#003300',
   }
 
   export default COLORS

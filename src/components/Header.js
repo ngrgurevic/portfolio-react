@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import ParticlesBg from "particles-bg";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,12 +11,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import colors from './colors'
-import { Paper } from "@mui/material";
-import Switch from "./Switch";
-import MySwitch from "./Switch";
+import COLORS from './colors'
+
+
 
 const pages = ['About', 'Projects', 'Contact'];
+
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -28,24 +28,14 @@ function Header() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  // const menuHover = {
-  //   "&:hover": {
-  //     color: 'white',
-  //     backgroundColor: colors.primary
-  //   },
-  // };
+  
+
   return (
-    <Paper>
-      <AppBar position="fixed"  sx={{
-        backgroundColor: colors.primary_light,
-        "&:hover": {
-          color: 'white',
-          backgroundColor: colors.primary,
-          transition: 'ease-in',
-        },
-      }} >
+    
+      <AppBar position="fixed" sx={{
+        marginBottom: "30px",
         
-        <Container maxWidth="xl" >
+      }}>     
           <Toolbar>
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             <Typography
@@ -125,7 +115,7 @@ function Header() {
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 textDecoration: 'none',
-                color: colors.primary
+                color: COLORS.primary
               }}
             >
              
@@ -135,21 +125,20 @@ function Header() {
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: colors.white , display: 'block', "&:hover": {
+                  sx={{ my: 2, color: COLORS.white , display: 'block', "&:hover": {
                     color: 'white',
-                    backgroundColor: colors.primary_light,
+                    backgroundColor: COLORS.primary_light,
                     transition: 'ease-in',
                   } }}
                 >
                   {page}
                 </Button>
               ))}
+              
             </Box>
-            <MySwitch/>
           </Toolbar>
-        </Container>
       </AppBar>
-    </Paper>
+   
   );
 }
 
