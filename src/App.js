@@ -8,6 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { Switch,Paper, Divider, Box } from '@mui/material';
 import ParticlesBg from 'particles-bg';
 import AboutMe from './components/AboutMe';
+import ParticlesConfig from './components/ParticlesConfig'
 
 const style = {
   minHeight: "50%",
@@ -116,7 +117,7 @@ function App() {
     <ThemeProvider theme={toggleMode()} >
       
       <div className='bubbles'>
-      <ParticlesBg type='circle' bg={true}/>
+      <ParticlesBg type='circle' bg={true} config={ParticlesConfig}/>
       </div>
       <CssBaseline/>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Typography, Paper, Grid, Grid2, Item, Avatar, Divider } from '@mui/material'
 import '../App.css'
-import picture from './images/Profile.gif'
+import picture from '../images/Profile.gif'
 import PieChart from 'react-pie-graph-chart';
 import COLORS from './colors'
 
