@@ -4,24 +4,27 @@ import '../App.css'
 import picture from '../images/Profile.gif'
 import PieChart from 'react-pie-graph-chart';
 import COLORS from './colors'
+import StarRating from './StarRating'
 
 
 function AboutMe() {
     return (
         <Container>
-            <Grid container spacing={2} >
-                <Grid xs={12} md={12}>
-                    <Paper sx={{ mx: 5, my: 5, px: 5, py: 5 }}>
+            <Grid container spacing={4} >
+                <Grid xs={12} md={20}>
                         <Typography
                             variant="h1"
                             noWrap
                             component="h1"
                             href=""
                             style={{ fontSize: 60 }}
+                            align= 'center'
                         >
-                            About me
+                            <Divider sx={{ my: 5, borderBottom: 2, width: '100%', mx:-3 }}>
+                            About me</Divider>
+                            
                         </Typography>
-                    </Paper>
+                    
 
                 </Grid>
                 <Grid xs={8} md={6} >
@@ -76,16 +79,16 @@ function AboutMe() {
                             href=""
                             align="center"
                         >
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
-                            React<br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
-                            JavaScript <br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
-                            Kotlin <br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
-                            Swift <br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
-                            Java <br /></Divider>
+                            <Divider sx={{ my: 5, borderBottom: 2 }}>
+                            React <StarRating value="3"/> </Divider>
+                            <Divider sx={{ my: 5, borderBottom: 2 }}>
+                            JavaScript <StarRating value="4"/></Divider>
+                            <Divider sx={{ my: 5, borderBottom: 2 }}>
+                            Kotlin<StarRating value="4"/> </Divider>
+                            <Divider sx={{ my: 5, borderBottom: 2 }}>
+                            Swift <StarRating value="3"/></Divider>
+                            <Divider sx={{ my: 5, borderBottom: 2 }}>
+                            Java<StarRating value="4.5"/></Divider>
                         </Typography>
                         <PieChart type="donut" data={[
                             {
