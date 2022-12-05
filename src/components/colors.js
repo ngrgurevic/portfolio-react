@@ -6,8 +6,6 @@ const COLORS = {
     primary_light: '#bc477b',
     secondary_light: '#c3fdff',
     secondary_dark: '#5d99c6',
-    // your colors
-
     pieColorOne: '#7f0000',
     pieColorTwo: '#12005e',
     pieColorThree: '#01579b',

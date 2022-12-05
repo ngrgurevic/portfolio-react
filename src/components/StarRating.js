@@ -2,6 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { styled } from '@mui/material/styles';
+import COLORS from './colors'
 
 const labels = {
   0.5: 'Useless',
@@ -15,6 +18,11 @@ const labels = {
   4.5: 'Excellent',
   5: 'Excellent+',
 };
+const StyledRating = styled(Rating)({
+    '& .MuiRating-iconFilled': {
+      color: COLORS.secondary_dark,
+    }
+  });
 
 export default function StarRating(props) {
   return (
@@ -25,14 +33,15 @@ export default function StarRating(props) {
         alignItems: 'center',
       }}
     >
-      <Rating
+      <StyledRating
         name="text-feedback"
         value={props.value}
         readOnly
+        icon={<FavoriteIcon/>}
         precision={0.5}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+        emptyIcon={<FavoriteIcon style={{  color: COLORS.secondary_light}} fontSize="inherit" />}
       />
-      <Box sx={{ ml: 2 }}>{labels[props.value]}</Box>
+      <Box sx={{ ml: 5, alignContent: 'left', }}>{labels[props.value]}</Box>
     </Box>
   );
 }
