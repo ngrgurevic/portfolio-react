@@ -14,6 +14,7 @@ import MySwitch from "./MySwitch";
 import { darkTheme, lightTheme } from "../App";
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import darkCheck from "./darkCheck";
+import '../App.css'
 
 
 

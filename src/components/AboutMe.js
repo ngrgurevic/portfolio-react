@@ -19,8 +19,6 @@ const theme= useTheme()
                             href=""
                             style={{ fontSize: 60 ,}}
                             align= 'center'
-                            
-
                         >
                             <Divider sx={{ my: 5, borderBottom: 2, width: '100%', mx:-3,}}>
                             About me</Divider>

@@ -69,23 +69,24 @@
   height: 280px;
 }
 
-/* @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .App {
     width: 100%;
+    
 }
 }
 @media only screen and (max-width: 512px) {
   .App {
     width: 100%;
-    font-size: medium;
+    font-size: small;
   }
 }
 @media only screen and (max-width: 412px) {
   .App {
     width: 50%;
-    font-size: medium;
+    font-size: small;
   }
-} */
+}
 
 #aboutDiv:hover {
   background-color: gray;

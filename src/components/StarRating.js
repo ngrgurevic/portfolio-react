@@ -5,6 +5,7 @@ import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { styled } from '@mui/material/styles';
 import COLORS from './colors'
+import '../App.css'
 
 const labels = {
   0.5: 'Not much',

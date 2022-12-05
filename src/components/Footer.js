@@ -4,11 +4,12 @@ import COLORS from './colors'
 import darkCheck from './darkCheck'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import '../App.css'
 
 export default function Footer() {
     return (
         <Paper sx={{
-            mx: 5, my: 5, border: 5, justifyContent: 'center',
+            mx: 0, mt: 2, border: 2, justifyContent: 'center',
             boxShadow: '10', opacity: 0.9
         }}>
             <Grid container
@@ -44,12 +45,12 @@ export default function Footer() {
                 </Grid>
                 <Grid xs={6} >
 
-                    <Typography variant="h5"
+                    <Typography variant="h4"
                         noWrap
-                        component="h5"
+                        component="h4"
                         href=""
                         align='center'
-                        sx={{py:5}}
+                        sx={{py:2}}
                         >
                         
                             Links
