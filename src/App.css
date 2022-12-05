@@ -86,3 +86,7 @@
     font-size: medium;
   }
 } */
+
+#aboutDiv:hover {
+  background-color: gray;
+}

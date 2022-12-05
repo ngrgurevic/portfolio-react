@@ -1,17 +1,21 @@
-import React, { useState } from "react";
-import { createTheme, Switch } from "@mui/material";
-import COLORS from "./colors";
-import { ThemeContext } from "../App";
-import "./MySwitch.css";
+import React from "react";
+import { createTheme, Switch, ThemeProvider, Toolbar } from "@mui/material";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+import Tooltip from '@mui/material/Tooltip';
 
-function MySwitch(theme,toggleTheme) {
-    const [isToggled, setIsToggled] = useState(false);
+function MySwitch({darkMode, setDarkMode}) {   
   
-    const onToggle = () => {
-      setIsToggled(!isToggled);
-    };
     return (
-        <Switch checked={isToggled} onChange={onToggle}/>
+      <Tooltip describeChild title={darkMode ? "darkTheme" : "lightTheme"}>
+      <DarkModeSwitch
+      style={{margin: '1rem' }}
+      checked={darkMode}
+      onChange={setDarkMode}
+      size={45}
+    />
+    </Tooltip>
     );
   }
   export default MySwitch;
+
+  // () => setDarkMode(!darkMode)

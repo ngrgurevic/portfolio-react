@@ -1,26 +1,28 @@
 import React from 'react'
-import { Container, Typography, Paper, Grid, Grid2, Item, Avatar, Divider } from '@mui/material'
+import { Container, Typography, Paper, Grid,Box, Grid2, Item, Avatar, Divider, useTheme } from '@mui/material'
 import '../App.css'
 import picture from '../images/Profile.gif'
 import PieChart from 'react-pie-graph-chart';
 import COLORS from './colors'
 import StarRating from './StarRating'
 
-
 function AboutMe() {
+const theme= useTheme()
     return (
-        <Container>
-            <Grid container spacing={4} >
+
+            <Grid container spacing={1} >
                 <Grid xs={12} md={20}>
                         <Typography
-                            variant="h1"
+                            variant="h3"
                             noWrap
-                            component="h1"
+                            component="h3"
                             href=""
-                            style={{ fontSize: 60 }}
+                            style={{ fontSize: 60 ,}}
                             align= 'center'
+                            
+
                         >
-                            <Divider sx={{ my: 5, borderBottom: 2, width: '100%', mx:-3 }}>
+                            <Divider sx={{ my: 5, borderBottom: 2, width: '100%', mx:-3,}}>
                             About me</Divider>
                             
                         </Typography>
@@ -29,7 +31,7 @@ function AboutMe() {
                 </Grid>
                 <Grid xs={8} md={6} >
                     <Paper sx={{
-                        mx: -1, my: 5, border: 2, px: 2, py: 2, justifyContent: 'center',
+                        mx: -1, my: 5, border: 2, px: 2, py: 10, justifyContent: 'center',
                         boxShadow: '10',
                     }}>
 
@@ -44,24 +46,24 @@ function AboutMe() {
                             href=""
                             align='center'
                         >
-                            <Divider sx={{ my: 4, borderBottom: 2 }} variant='fullWidth'>
+                            <Divider sx={{ my: 6, borderBottom: 2 }} variant='fullWidth'>
                             Name: Nikola Grgurević <br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2, px:2 }} variant='fullWidth'>
+                            <Divider sx={{ my: 6, borderBottom: 2, px:2 }} variant='fullWidth'>
                             Education: Bachelor of Information Technology<br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
+                            <Divider sx={{ my: 6, borderBottom: 2 }}>
                             Date of Birth: 19.06.1992<br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
+                            <Divider sx={{ my: 6, borderBottom: 2 }}>
                             Location: Zagreb<br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
+                            <Divider sx={{ my: 6, borderBottom: 2 }}>
                             Hobbies: Cycling,Swimming <br /></Divider>
-                            <Divider sx={{ my: 4, borderBottom: 2 }}>
+                            <Divider sx={{ my: 6, borderBottom: 2 }}>
                             Pets: 2 Dogs <br /></Divider>
                         </Typography>
                     </Paper>
                 </Grid>
                 <Grid xs={8} md={6} >
                     <Paper sx={{
-                        mx: 3, my: 5, border: 2, px: 2, py: 2, justifyContent: 'center',
+                        mx: 3, my: 5, border: 2, px: 3, py: 3, justifyContent: 'center',
                         boxShadow: '10',
                     }}>
                         <Typography
@@ -70,7 +72,7 @@ function AboutMe() {
                             component="h2"
                             href=""
                         >
-                            Skills<br />
+                            Interest<br />
                         </Typography>
                         <Typography
                             variant="p"
@@ -80,15 +82,23 @@ function AboutMe() {
                             align="center"
                         >
                             <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            React <StarRating value="3"/> </Divider>
+                            React <StarRating value="4"/> </Divider>
                             <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            JavaScript <StarRating value="4"/></Divider>
+                            JavaScript <StarRating value="3.5"/></Divider>
                             <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            Kotlin<StarRating value="4"/> </Divider>
+                            Kotlin<StarRating value="3.5"/> </Divider>
                             <Divider sx={{ my: 5, borderBottom: 2 }}>
                             Swift <StarRating value="3"/></Divider>
                             <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            Java<StarRating value="4.5"/></Divider>
+                            Java<StarRating value="2.5"/></Divider>
+                        </Typography>
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            component="h5"
+                            href=""
+                        >
+                            My Interest
                         </Typography>
                         <PieChart type="donut" data={[
                             {
@@ -120,9 +130,6 @@ function AboutMe() {
                     </Paper>
                 </Grid>
             </Grid>
-
-
-        </Container>
     )
 }
 

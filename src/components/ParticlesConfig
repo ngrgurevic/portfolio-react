@@ -1,7 +1,7 @@
 import COLORS from "./colors";
 
 export let config = {
-      num: [1, 15],
+      num: [1, 5],
       rps: 0.5,
       radius: [5, 10],
       life: [1.5, 2],

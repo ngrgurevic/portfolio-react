@@ -3,12 +3,16 @@ import Header from './components/Header'
 import About from './components/Welcome'
 import React, { createContext, useState, useEffect } from 'react'
 import COLORS from './components/colors';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme,useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Switch, Paper, Divider, Box } from '@mui/material';
+import { Switch, Paper, Divider, Box, Tooltip } from '@mui/material';
 import ParticlesBg from 'particles-bg';
 import AboutMe from './components/AboutMe';
 import ParticlesConfig from './components/ParticlesConfig'
+import darkCheck from './components/darkCheck';
+import MySwitch from './components/MySwitch';
+import Footer from './components/Footer'
+
 
 const style = {
   minHeight: "50%",
@@ -22,6 +26,7 @@ export const lightTheme = createTheme({
   palette: {
     primary: {
       main: COLORS.primary,
+      light: COLORS.primary_light
     },
     secondary: {
       main: COLORS.secondary
@@ -33,7 +38,10 @@ export const lightTheme = createTheme({
         root: {
           backgroundColor: COLORS.primary_light,
           color: COLORS.black,
-
+          
+        },primary:{
+          main: COLORS.primary,
+          light: COLORS.primary_light
         },
         sx: ({
           padding: 50
@@ -68,6 +76,11 @@ export const lightTheme = createTheme({
 });
 
 export const darkTheme = createTheme({
+  root:{
+    palette: {
+      mode: "dark"
+    },
+  },
   palette: {
     mode: "dark"
   },
@@ -112,9 +125,10 @@ export const darkTheme = createTheme({
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
+  
 
   return (
-    <ThemeProvider theme={toggleMode()} >
+    <ThemeProvider theme={darkCheck(darkMode)}>
 
       <div className='bubbles'>
         <ParticlesBg type='circle' bg={true} config={ParticlesConfig} />
@@ -124,28 +138,34 @@ function App() {
       <div className="App" style={style}>
 
         <br />
-        <Box>
-          <Switch checked={darkMode}
-            onChange={() => setDarkMode(!darkMode)} />
-        </Box>
-
-        <Header />
-        <About />
        
+
+        <Header>
+          {/* <Switch checked={darkMode}
+            onChange={() => setDarkMode(!darkMode)} /> */}
+            
+       </Header>
+       <MySwitch darkMode={darkMode}
+            setDarkMode={() => {
+              setDarkMode(!darkMode)}}
+           />
+        
+          
+        <About />
+    
         <Paper sx={{ mx: 5, my: 5, border: 5, px: 5, py: 5 }} >
+
           <AboutMe />
-        </Paper>
-
-
+        </Paper>    
+        <Footer/>    
       </div>
 
     </ThemeProvider>
   );
 
-  function toggleMode() {
+  function darkCheck() {
     return darkMode ? darkTheme : lightTheme;
   }
-
 }
 
 export default App;

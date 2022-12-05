@@ -7,20 +7,20 @@ import { styled } from '@mui/material/styles';
 import COLORS from './colors'
 
 const labels = {
-  0.5: 'Useless',
-  1: 'Useless+',
-  1.5: 'Poor',
-  2: 'Poor+',
-  2.5: 'Solid',
-  3: 'Solid+',
-  3.5: 'Decent',
-  4: 'Decent+',
+  0.5: 'Not much',
+  1: 'Meh',
+  1.5: 'Hm',
+  2: 'Hmmm',
+  2.5: 'Interested',
+  3: 'Interested+',
+  3.5: 'Very',
+  4: "Very",
   4.5: 'Excellent',
   5: 'Excellent+',
 };
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
-      color: COLORS.secondary_dark,
+      color: COLORS.secondary_light,
     }
   });
 
@@ -29,7 +29,7 @@ export default function StarRating(props) {
     <Box
       sx={{
         width: 200,
-        display: 'flex',
+        display: 'box',
         alignItems: 'center',
       }}
     >
@@ -39,9 +39,9 @@ export default function StarRating(props) {
         readOnly
         icon={<FavoriteIcon/>}
         precision={0.5}
-        emptyIcon={<FavoriteIcon style={{  color: COLORS.secondary_light}} fontSize="inherit" />}
+        emptyIcon={<FavoriteIcon style={{  color: COLORS.secondary_dark}} fontSize="inherit" />}
       />
-      <Box sx={{ ml: 5, alignContent: 'left', }}>{labels[props.value]}</Box>
+      
     </Box>
   );
 }

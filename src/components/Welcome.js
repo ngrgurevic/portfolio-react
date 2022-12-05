@@ -15,25 +15,20 @@ const style2 = {
 function Welcome() {
  return(
     <Container>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+             
         <Typography
               variant="h1"
               noWrap
               component="h1"
               href=""
+              sx={{my:5}}
             >
             Welcome to my Portfolio
             </Typography>
-            <br/>
-            <br/>
-            <HomeIcon sx={{my:15}}
+            
+            <HomeIcon sx={{my:20}}
                 />
-              <br/>
-              <br/>
+              
             <Typography
               variant="p"
               noWrap

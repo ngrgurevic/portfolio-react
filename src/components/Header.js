@@ -1,5 +1,4 @@
-import React, { createContext, useState } from "react";
-import ParticlesBg from "particles-bg";
+import React, { Children, createContext, useState } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,11 +6,14 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import COLORS from './colors'
+import MySwitch from "./MySwitch";
+import { darkTheme, lightTheme } from "../App";
+import { ThemeProvider, useTheme } from '@mui/material/styles';
+import darkCheck from "./darkCheck";
 
 
 
@@ -28,13 +30,12 @@ function Header() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const [isToggled, setIsToggled] = useState(false);
   
-
   return (
-    
+    <ThemeProvider>
       <AppBar position="fixed" sx={{
         marginBottom: "30px",
-        
       }}>     
           <Toolbar>
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -134,12 +135,20 @@ function Header() {
                   {page}
                 </Button>
               ))}
-              
+             
             </Box>
+            {/* <MySwitch darkMode={isToggled}
+            setDarkMode={() => {
+              setIsToggled(!isToggled)}}
+           /> */}
           </Toolbar>
+          {Children.map()}
       </AppBar>
-   
+      </ThemeProvider>
   );
+  function darkCheck() {
+    return isToggled ? darkTheme : lightTheme;
+  }
 }
 
 
