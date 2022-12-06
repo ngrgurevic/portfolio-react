@@ -1,4 +1,4 @@
-import React, { Children, createContext, useState, useEffect } from "react";
+import React, { Children, createContext, useState, useRef, useEffect } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,9 +18,6 @@ import '../App.css'
 import { useScrollTrigger } from "@mui/material";
 import Slide from '@mui/material/Slide';
 import HideAppBar from "./HideOnScroll";
-
-
-
 
 
 const pages = ['About', 'Projects', 'Contact'];
@@ -49,7 +46,7 @@ function Header() {
               variant="h4"
               noWrap
               component="a"
-              href="/"
+              href="#index.html"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -148,7 +145,6 @@ function Header() {
               setIsToggled(!isToggled)}}
            /> */}
           </Toolbar>
-          {Children.map()}
       </AppBar>
       </HideAppBar>
   );

@@ -5,6 +5,7 @@ import picture from '../images/Profile.gif'
 import PieChart from 'react-pie-graph-chart';
 import COLORS from './colors'
 import StarRating from './StarRating'
+import DonutChart from './MyDonutChart';
 
 function AboutMe() {
 const theme= useTheme()
@@ -95,36 +96,11 @@ const theme= useTheme()
                             noWrap
                             component="h5"
                             href=""
+                            sx={{mb:4}}
                         >
                             My Interest
                         </Typography>
-                        <PieChart type="donut" data={[
-                            {
-                                type: "React",
-                                value: 200,
-                                color: COLORS.pieColorOne
-                            },
-                            {
-                                type: "JavaScript",
-                                value: 200,
-                                color: COLORS.pieColorTwo
-                            },
-                            {
-                                type: "Kotlin",
-                                value: 100,
-                                color: COLORS.pieColorThree
-                            },
-                            {
-                                type: "Swift",
-                                value: 100,
-                                color: COLORS.pieColorFour
-                            },
-                            {
-                                type: "Java",
-                                value: 50,
-                                color: "#4BA2DA"
-                            }
-                        ]} />
+                        <DonutChart />
                     </Paper>
                 </Grid>
             </Grid>

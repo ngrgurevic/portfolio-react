@@ -21,12 +21,12 @@ function Welcome() {
               noWrap
               component="h1"
               href=""
-              sx={{my:5}}
+              sx={{my:3}}
             >
             Welcome to my Portfolio
             </Typography>
             
-            <HomeIcon sx={{my:20}}
+            <HomeIcon sx={{my:15}}
                 />
               
             <Typography
@@ -34,6 +34,7 @@ function Welcome() {
               noWrap
               component="p"
               href=""
+              sx={{mb:10}}
             >
             I'm a Web and Mobile developer
             </Typography>
