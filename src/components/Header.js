@@ -1,4 +1,4 @@
-import React, { Children, createContext, useState, useRef, useEffect } from "react";
+import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,18 +10,11 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import COLORS from './colors'
-import MySwitch from "./MySwitch";
-import { darkTheme, lightTheme } from "../App";
-import { ThemeProvider, useTheme } from '@mui/material/styles';
-import darkCheck from "./darkCheck";
 import '../App.css'
-import { useScrollTrigger } from "@mui/material";
-import Slide from '@mui/material/Slide';
 import HideAppBar from "./HideOnScroll";
-
+import CustomContainer from "./Paper";
 
 const pages = ['About', 'Projects', 'Contact'];
-
 
 function Header() {
 

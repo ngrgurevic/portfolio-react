@@ -1,5 +1,4 @@
 import React from "react";
-import { createTheme, Switch, ThemeProvider, Toolbar } from "@mui/material";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import Tooltip from '@mui/material/Tooltip';
 

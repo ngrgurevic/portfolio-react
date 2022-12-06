@@ -5,7 +5,7 @@ import React, { createContext, useState, useEffect } from 'react'
 import COLORS from './components/colors';
 import { ThemeProvider, createTheme,useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Switch, Paper, Divider, Box, Tooltip } from '@mui/material';
+import { Switch, Divider, Box, Tooltip, Paper } from '@mui/material';
 import ParticlesBg from 'particles-bg';
 import AboutMe from './components/AboutMe';
 import ParticlesConfig from './components/ParticlesConfig'
@@ -14,6 +14,7 @@ import MySwitch from './components/MySwitch';
 import Footer from './components/Footer'
 import HideOnScroll from './components/HideOnScroll';
 import { darkTheme, lightTheme } from './components/Themes';
+import customPaper from './components/Paper'
 
 const style = {
   minHeight: "50%",
@@ -38,7 +39,7 @@ function App() {
       </div>
       <CssBaseline />
 
-      <div className="App" style={style}>
+      <div className="App">
 
         <br />
        
@@ -53,8 +54,8 @@ function App() {
               setDarkMode(!darkMode)}}
            />
         <About />
-    
-        <Paper sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }} >
+        {/* sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }}  */}
+        <Paper sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }}>
 
           <AboutMe />
         </Paper>    
