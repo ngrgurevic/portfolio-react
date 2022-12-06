@@ -13,6 +13,7 @@ import darkCheck from './components/darkCheck';
 import MySwitch from './components/MySwitch';
 import Footer from './components/Footer'
 import HideOnScroll from './components/HideOnScroll';
+import { darkTheme, lightTheme } from './components/Themes';
 
 const style = {
   minHeight: "50%",
@@ -22,108 +23,7 @@ const style = {
 
 };
 
-export const lightTheme = createTheme({
-  palette: {
-    primary: {
-      main: COLORS.primary,
-      light: COLORS.primary_light
-    },
-    secondary: {
-      main: COLORS.secondary
-    }
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          backgroundColor: COLORS.primary_light,
-          color: COLORS.black,
-          
-        },primary:{
-          main: COLORS.primary,
-          light: COLORS.primary_light
-        },
-        sx: ({
-          padding: 50
-        })
-      },
-    },
-    MuiTypography: {
-      styleOverrides: {
-        root: {
 
-        },
-        h1: {
-          fontSize: 80,
-          fontFamily: 'sans-serif'
-        },
-        p: {
-          fontSize: 24,
-        },
-        h2: {
-          fontSize: 50,
-          fontFamily: 'sans-serif'
-        },
-        a:{
-          color: COLORS.primary
-        }
-      },
-    },
-
-  },
-  breakpoints: {
-    value:
-      { xs: 0, sm: 600, md: 960, lg: 1280, xl: 1920 }
-  }
-
-});
-
-export const darkTheme = createTheme({
-  root:{
-    palette: {
-      mode: "dark"
-    },
-  },
-  palette: {
-    mode: "dark"
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          color: COLORS.white,
-        }
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          color: COLORS.black,
-        },
-
-      },
-    },
-
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-
-        },
-        h1: {
-          fontSize: 80,
-          fontFamily: 'sans-serif'
-        },
-        p: {
-          fontSize: 24,
-        }
-
-      },
-      components: {
-
-      }
-    },
-  },
-});
 
 function App() {
 
@@ -152,8 +52,6 @@ function App() {
             setDarkMode={() => {
               setDarkMode(!darkMode)}}
            />
-        
-          
         <About />
     
         <Paper sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }} >
