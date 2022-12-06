@@ -21,7 +21,7 @@ function Welcome() {
               noWrap
               component="h1"
               href=""
-              sx={{my:3}}
+              sx={{my:10}}
             >
             Welcome to my Portfolio
             </Typography>

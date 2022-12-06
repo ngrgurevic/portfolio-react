@@ -23,7 +23,7 @@ export const lightTheme = createTheme({
           light: COLORS.primary_light
         },
         sx: ({
-          padding: 50
+          p: 5
         })
       },
     },
@@ -42,10 +42,8 @@ export const lightTheme = createTheme({
         h2: {
           fontSize: 50,
           fontFamily: 'sans-serif'
-        },
-        a:{
-          color: COLORS.primary
         }
+        
       },
     },
 

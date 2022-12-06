@@ -37,9 +37,10 @@ export default function Footer() {
                         align='center'
                         sx={{pt:1}}
                     >
-                        Phone: +385977645232<br/>
-                        Email: <a>nikolagrgurevic92@gmail.com</a>
                         <Timer/>
+                        Phone: +385977645232<br/>
+                        Email: nikolagrgurevic92@gmail.com
+                        
                     </Typography>
 
 

@@ -13,8 +13,8 @@ function Timer() {
     }
     return (
     <Typography variant="p">
-       <br/>
        Time: {Time}
+       <br/>
     </Typography>
     )
 }

@@ -12,6 +12,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import COLORS from './colors'
 import '../App.css'
 import HideAppBar from "./HideOnScroll";
+import { Link } from "@mui/material";
 
 const pages = ['About', 'Projects', 'Contact'];
 
@@ -33,7 +34,9 @@ function Header() {
         marginBottom: "30px",
       }}>     
           <Toolbar>
+            
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            
             <Typography
               variant="h4"
               noWrap
@@ -49,6 +52,7 @@ function Header() {
                 textDecoration: 'none',
               }}
             >
+              
               Portfolio
             </Typography>
 
@@ -118,6 +122,7 @@ function Header() {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } , color: 'red' }} >
               {pages.map((page) => (
+                <Link >
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -127,8 +132,10 @@ function Header() {
                     transition: 'ease-in',
                   } }}
                 >
+                  
                   {page}
                 </Button>
+                </Link>
               ))}
              
             </Box>
