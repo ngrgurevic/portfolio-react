@@ -30,9 +30,9 @@ function Welcome() {
                 />
               
             <Typography
-              variant="p"
+              variant="h4"
               noWrap
-              component="p"
+              component="h4"
               href=""
               sx={{mb:10}}
             >

@@ -1,5 +1,24 @@
+
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: local('Roboto-Bold'), url(./fonts/Roboto-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: local('Roboto-Regular'), url(./fonts/Roboto-Regular.ttf) format('truetype');
+}
+
 .App {
   text-align: center;
+}
+.App h1,h2,h4,h3 {
+  font-family: 'Roboto-Bold';
+  
+}
+.App p {
+  font-family: 'Roboto-Regular';
+  
 }
 
 #light {
