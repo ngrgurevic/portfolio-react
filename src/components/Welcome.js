@@ -1,7 +1,6 @@
 import React from 'react'
 import {Container,Card,Typography, Paper, ThemeProvider, Divider} from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home';
-import { lightTheme } from '../App';
 import '../App.css'
 
 const style2 = {

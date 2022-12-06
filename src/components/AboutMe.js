@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Typography, Paper, Grid,Box, Grid2, Item, Avatar, Divider, useTheme } from '@mui/material'
+import { Container, Typography, Paper, Grid,Box, Divider, useTheme } from '@mui/material'
 import '../App.css'
 import picture from '../images/Profile.gif'
 import PieChart from 'react-pie-graph-chart';

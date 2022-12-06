@@ -13,7 +13,7 @@ export default function Footer() {
             boxShadow: '10', opacity: 0.9
         }}>
             <Grid container
-                rowSpacing={1} >
+                rowSpacing={2} >
 
                 <Grid md={6} sx={{ width: '100%' }} >
 
@@ -60,10 +60,10 @@ export default function Footer() {
                         direction="row-reverse"
                         justifyContent="center"
                         alignItems="center"
-                        spacing={6}
+                        spacing={8}
 
                     >
-
+                        
                         <a href='https://github.com/ngrgurevic'>
                             <GitHubIcon fontSize='large'
                                 color={COLORS.secondary_light}

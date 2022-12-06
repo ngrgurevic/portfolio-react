@@ -63,6 +63,9 @@ export const lightTheme = createTheme({
         h2: {
           fontSize: 50,
           fontFamily: 'sans-serif'
+        },
+        a:{
+          color: COLORS.primary
         }
       },
     },
@@ -153,7 +156,7 @@ function App() {
           
         <About />
     
-        <Paper sx={{ mx: 5, my: 5, border: 5, px: 5, py: 5 }} >
+        <Paper sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }} >
 
           <AboutMe />
         </Paper>    
