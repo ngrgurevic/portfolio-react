@@ -1,10 +1,11 @@
-import { Box, Grid, Paper, Typography, Divider, Stack } from '@mui/material'
+import { Box, Grid, Paper, Typography, Divider, Stack, Link } from '@mui/material'
 import React, { Children } from 'react'
 import COLORS from './colors'
 import darkCheck from './darkCheck'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../App.css'
+import Timer from './Timer'
 
 export default function Footer() {
     return (
@@ -38,7 +39,7 @@ export default function Footer() {
                     >
                         Phone: +385977645232<br/>
                         Email: <a>nikolagrgurevic92@gmail.com</a>
-
+                        <Timer/>
                     </Typography>
 
 
@@ -64,17 +65,17 @@ export default function Footer() {
 
                     >
                         
-                        <a href='https://github.com/ngrgurevic'>
-                            <GitHubIcon fontSize='large'
+                        <Link href='https://github.com/ngrgurevic'>
+                            <GitHubIcon sx={{width:50,height:50, color:COLORS.secondary_light}}
                                 color={COLORS.secondary_light}
                             />
-                        </a>
+                        </Link>
 
-                        <a href='https://www.linkedin.com/in/nikola-grgurevic-0782511b2'>
-                            <LinkedInIcon fontSize='large'
+                        <Link href='https://www.linkedin.com/in/nikola-grgurevic-0782511b2'>
+                            <LinkedInIcon sx={{width:50,height:50, color:COLORS.secondary_light}}
                                 
                             />
-                        </a>
+                        </Link>
                     </Stack>
 
 

@@ -12,7 +12,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 import COLORS from './colors'
 import '../App.css'
 import HideAppBar from "./HideOnScroll";
-import CustomContainer from "./Paper";
 
 const pages = ['About', 'Projects', 'Contact'];
 

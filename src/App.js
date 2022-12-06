@@ -14,7 +14,8 @@ import MySwitch from './components/MySwitch';
 import Footer from './components/Footer'
 import HideOnScroll from './components/HideOnScroll';
 import { darkTheme, lightTheme } from './components/Themes';
-import customPaper from './components/Paper'
+import customPaper from './components/CustomContainer'
+import CopyrightComponent from './components/CopyrightComponent'
 
 const style = {
   minHeight: "50%",
@@ -59,9 +60,9 @@ function App() {
 
           <AboutMe />
         </Paper>    
-        <Footer/>    
+        <Footer/>
+        <CopyrightComponent/>
       </div>
-
     </ThemeProvider>
   );
 
