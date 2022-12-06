@@ -9,21 +9,21 @@ import '../App.css'
 export default function Footer() {
     return (
         <Paper sx={{
-            mx: 0, mt: 2, border: 2, justifyContent: 'center',
+            mx: 0, mt: 2, borderTop: 5, justifyContent: 'center',
             boxShadow: '10', opacity: 0.9
         }}>
             <Grid container
                 rowSpacing={2} >
 
-                <Grid md={6} sx={{ width: '100%' }} >
+                <Grid md={6} sx={{ width: '100%',  pb:3 }} >
 
 
                     <Typography variant="h4"
                         noWrap
-                        component="h5"
+                        component="h4"
                         href=""
                         align='center'
-                        sx={{py:2}}
+                        sx={{pt:4}}
                         >
                         
                             Contact
@@ -34,7 +34,7 @@ export default function Footer() {
                         component="p"
                         href=""
                         align='center'
-                        sx={{py:2}}
+                        sx={{pt:1}}
                     >
                         Phone: +385977645232<br/>
                         Email: <a>nikolagrgurevic92@gmail.com</a>
@@ -50,7 +50,7 @@ export default function Footer() {
                         component="h4"
                         href=""
                         align='center'
-                        sx={{py:2}}
+                        sx={{pt:4, pb:3}}
                         >
                         
                             Links
@@ -60,7 +60,7 @@ export default function Footer() {
                         direction="row-reverse"
                         justifyContent="center"
                         alignItems="center"
-                        spacing={8}
+                        spacing={5}
 
                     >
                         

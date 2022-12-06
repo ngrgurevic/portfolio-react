@@ -12,7 +12,7 @@ import ParticlesConfig from './components/ParticlesConfig'
 import darkCheck from './components/darkCheck';
 import MySwitch from './components/MySwitch';
 import Footer from './components/Footer'
-
+import HideOnScroll from './components/HideOnScroll';
 
 const style = {
   minHeight: "50%",

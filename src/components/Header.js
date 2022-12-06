@@ -1,4 +1,4 @@
-import React, { Children, createContext, useState } from "react";
+import React, { Children, createContext, useState, useEffect } from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,6 +15,11 @@ import { darkTheme, lightTheme } from "../App";
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import darkCheck from "./darkCheck";
 import '../App.css'
+import { useScrollTrigger } from "@mui/material";
+import Slide from '@mui/material/Slide';
+import HideAppBar from "./HideOnScroll";
+
+
 
 
 
@@ -22,6 +27,7 @@ const pages = ['About', 'Projects', 'Contact'];
 
 
 function Header() {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -31,11 +37,10 @@ function Header() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  const [isToggled, setIsToggled] = useState(false);
   
   return (
-    <ThemeProvider>
-      <AppBar position="fixed" sx={{
+    <HideAppBar>
+      <AppBar  position="fixed" sx={{
         marginBottom: "30px",
       }}>     
           <Toolbar>
@@ -145,12 +150,11 @@ function Header() {
           </Toolbar>
           {Children.map()}
       </AppBar>
-      </ThemeProvider>
+      </HideAppBar>
   );
-  function darkCheck() {
-    return isToggled ? darkTheme : lightTheme;
-  }
 }
 
 
 export default Header
+
+
