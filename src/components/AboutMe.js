@@ -14,7 +14,7 @@ function AboutMe() {
     return (
         <Paper sx={{
             mx: 5, my: 5, borderTop: 4, borderBottom: 4, display: 'center',
-            boxShadow: '10', opacity: 0.9, borderRadius: 20
+            boxShadow: '15', opacity: 0.9, borderRadius: 20
         }}>
         <Grid spacing={2}
             container
@@ -80,9 +80,9 @@ function AboutMe() {
                  
                     </Typography>
                     <Box sx={{mx:5,px:2,display: 'flex', justifyContent:'space-around'}}>
-                    <Avatar src={one} sx={{width:125,height:125}} />
+                    <Avatar src={one} sx={{width:125,height:125,opacity:1}} />
 
-                    <Avatar sx={{width:125,height:125}} src={two}/>  </Box>
+                    <Avatar sx={{width:125,height:125, opacity:1}} src={two}/>  </Box>
                 </Box>
 
                 <Box>

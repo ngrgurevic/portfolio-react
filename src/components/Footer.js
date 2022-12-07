@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <Paper sx={{
             mx: 0, mt: 2, borderTop: 4, display: 'center',
-            boxShadow: '10', opacity: 0.9
+            boxShadow: '10', opacity: 0.9, borderRadius: 1
         }}>
             <Grid container
                 rowSpacing={2} >

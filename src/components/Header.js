@@ -14,6 +14,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import COLORS from './colors'
 import '../App.css'
 import HideAppBar from "./HideOnScroll";
+import AboutMe from "./AboutMe";
+import Footer from "./Footer";
 import { Link } from "@mui/material";
 
 const pages = ['About', 'Projects', 'Contact'];
@@ -117,17 +119,19 @@ function Header() {
           >
             Portfolio
           </Typography>
-          <Box sx={{ flexGrow: 1, mx:5 , display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, mx:3 , display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
+                component={Link}
+                to={'../App'}
                 key={page}
-                onClick={handleCloseNavMenu}
+                
                 sx={{ mx: 2, color: 'white', display: 'block', "&:hover": {
                   color: 'white',
                   backgroundColor: COLORS.primary_light,
                   transition: 'ease-in',
                 } }}
-              >
+              > 
                 {page}
               </Button>
             ))}
