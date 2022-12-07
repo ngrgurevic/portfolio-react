@@ -1,11 +1,13 @@
 import React from 'react'
-import { Typography, Paper, Grid, Box, Divider, useTheme } from '@mui/material'
+import { Typography, Paper, Grid, Box, Divider, useTheme, Avatar } from '@mui/material'
 import '../App.css'
 import picture from '../images/Profile.gif'
 import StarRating from './StarRating'
 import DonutChart from './MyDonutChart';
 import { Container } from 'reactstrap'
 import COLORS from './colors'
+import one from '../images/1.jpeg'
+import two from '../images/2.jpeg'
 
 function AboutMe() {
     const theme = useTheme()
@@ -51,7 +53,7 @@ function AboutMe() {
                     <div id="img">
                         <img src={picture} id='img'
 
-                            style={{ width: 300, height: 250, borderRadius: 15, margin: 5 }} />
+                            style={{ width: 300, height: 250, borderRadius: 15, margin: 2 }} />
 
                     </div>
                     <Typography
@@ -74,9 +76,13 @@ function AboutMe() {
 
                         <h4>Hobbies: </h4>Cycling,Swimming 
 
-                        <h4>Pets: </h4> 2 Dogs
+                        <h4>Pets: </h4>
+                 
                     </Typography>
+                    <Box sx={{mx:5,px:2,display: 'flex', justifyContent:'space-around'}}>
+                    <Avatar src={one} sx={{width:125,height:125}} />
 
+                    <Avatar sx={{width:125,height:125}} src={two}/>  </Box>
                 </Box>
 
                 <Box>
