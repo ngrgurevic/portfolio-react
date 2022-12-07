@@ -7,10 +7,10 @@ function MySwitch({darkMode, setDarkMode}) {
     return (
       <Tooltip describeChild title={darkMode ? "darkTheme" : "lightTheme"}>
       <DarkModeSwitch
-      style={{margin: '1rem' }}
+      style={{marginTop: '5rem' }}
       checked={darkMode}
       onChange={setDarkMode}
-      size={45}
+      size={50}
     />
     </Tooltip>
     );
