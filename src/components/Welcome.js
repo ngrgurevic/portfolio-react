@@ -1,44 +1,43 @@
 import React from 'react'
-import {Container,Card,Typography, Paper, ThemeProvider, Divider} from '@mui/material'
+import {Container,Typography, Box} from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home';
 import '../App.css'
 
-const style2 = {
-    minHeight: "100%",
-    minWidth: "100%",
-    textAlign: "center",
-    padding: "5rem",
-    height: "100%"
-  };
+// const style2 = {
+//     minHeight: "100%",
+//     minWidth: "100%",
+//     textAlign: "center",
+//     padding: "5rem",
+//     height: "100%"
+//   };
 
 
 function Welcome() {
  return(
-    <Container>
-             
+        <Box sx={{my:10}}>
         <Typography
               variant="h1"
-              noWrap
+              Wrap
               component="h1"
               href=""
-              sx={{my:10}}
+              sx={{my:15}}
             >
             Welcome to my Portfolio
             </Typography>
             
-            <HomeIcon sx={{my:15}}
+            <HomeIcon sx={{my:7, width:50, height:50}}
                 />
               
             <Typography
               variant="h4"
-              noWrap
+              Wrap
               component="h4"
               href=""
-              sx={{mb:10}}
+              sx={{mb:5}}
             >
             I'm a Web and Mobile developer
             </Typography>
-    </Container>
+            </Box>  
  )
 }
 

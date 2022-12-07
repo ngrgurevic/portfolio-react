@@ -31,7 +31,7 @@ function Header() {
   return (
     <HideAppBar>
       <AppBar  position="fixed" sx={{
-        marginBottom: "30px",
+        mb:5
       }}>     
           <Toolbar>
             
@@ -104,7 +104,7 @@ function Header() {
             <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
             <Typography
               variant="h4"
-              noWrap
+              Wrap
               component="a"
               href=""
               sx={{
@@ -120,9 +120,9 @@ function Header() {
             >
              
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } , color: 'red' }} >
+            <Box sx={{ flexGrow: 1, display: { md: 'flex' } , color: 'red' }} >
               {pages.map((page) => (
-                <Link >
+                <Link>
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -132,7 +132,6 @@ function Header() {
                     transition: 'ease-in',
                   } }}
                 >
-                  
                   {page}
                 </Button>
                 </Link>
@@ -147,6 +146,7 @@ function Header() {
       </AppBar>
       </HideAppBar>
   );
+
 }
 
 

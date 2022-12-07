@@ -1,109 +1,126 @@
 import React from 'react'
-import { Container, Typography, Paper, Grid,Box, Divider, useTheme } from '@mui/material'
+import { Typography, Paper, Grid, Box, Divider, useTheme } from '@mui/material'
 import '../App.css'
 import picture from '../images/Profile.gif'
-import PieChart from 'react-pie-graph-chart';
-import COLORS from './colors'
 import StarRating from './StarRating'
 import DonutChart from './MyDonutChart';
+import { Container } from 'reactstrap'
+import COLORS from './colors'
 
 function AboutMe() {
-const theme= useTheme()
+    const theme = useTheme()
     return (
+        <Paper sx={{
+            mx: 5, my: 5, borderTop: 4, borderBottom: 4, display: 'center',
+            boxShadow: '10', opacity: 0.9, borderRadius: 20
+        }}>
+        <Grid spacing={2}
+            container
+            wrap='true'
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+        >
 
-            <Grid container spacing={1} >
-                <Grid xs={12} md={20}>
-                        <Typography
-                            variant="h3"
-                            noWrap
-                            component="h3"
-                            href=""
-                            style={{ fontSize: 60 ,}}
-                            align= 'center'
-                        >
-                            <Divider sx={{ my: 5, borderBottom: 2, width: '100%', mx:-3,}}>
-                            About me</Divider>
-                            
-                        </Typography>
-                    
+            <Grid xs={4} spacing={1}>
+                <Box>
+                    <Typography
+                        variant="h2"
+                        Wrap
+                        component="h2"
+                        href=""
+                        align='center'
+                        sx={{my:5}}
+                    >
+                        About me
 
-                </Grid>
-                <Grid xs={8} md={6} >
-                    <Paper sx={{
-                        mx: -1, my: 5, border: 2, px: 2, py: 10, justifyContent: 'center',
-                        boxShadow: '10',
-                    }}>
+                    </Typography>
+                </Box>
 
-                        <img src={picture}
-
-                            style={{ width: 300, height: 250, borderRadius: 15, margin: 10 }} />
-
-                        <Typography
-                            variant="p"
-                            noWrap
-                            component="p"
-                            href=""
-                            align='center'
-                        >
-                            <Divider sx={{ my: 6, borderBottom: 2 }} variant='fullWidth'>
-                            Name: Nikola Grgurević <br /></Divider>
-                            <Divider sx={{ my: 6, borderBottom: 2, px:2 }} variant='fullWidth'>
-                            Education: Bachelor of Information Technology<br /></Divider>
-                            <Divider sx={{ my: 6, borderBottom: 2 }}>
-                            Date of Birth: 19.06.1992<br /></Divider>
-                            <Divider sx={{ my: 6, borderBottom: 2 }}>
-                            Location: Zagreb<br /></Divider>
-                            <Divider sx={{ my: 6, borderBottom: 2 }}>
-                            Hobbies: Cycling,Swimming <br /></Divider>
-                            <Divider sx={{ my: 6, borderBottom: 2 }}>
-                            Pets: 2 Dogs <br /></Divider>
-                        </Typography>
-                    </Paper>
-                </Grid>
-                <Grid xs={8} md={6} >
-                    <Paper sx={{
-                        mx: 3, my: 5, border: 2, px: 3, py: 3, justifyContent: 'center',
-                        boxShadow: '10',
-                    }}>
-                        <Typography
-                            variant="h2"
-                            noWrap
-                            component="h2"
-                            href=""
-                        >
-                            Interest<br />
-                        </Typography>
-                        <Typography
-                            variant="p"
-                            noWrap
-                            component="p"
-                            href=""
-                            align="center"
-                        >
-                            <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            React <StarRating value="4"/> </Divider>
-                            <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            JavaScript <StarRating value="3.5"/></Divider>
-                            <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            Kotlin<StarRating value="3.5"/> </Divider>
-                            <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            Swift <StarRating value="3"/></Divider>
-                            <Divider sx={{ my: 5, borderBottom: 2 }}>
-                            Java<StarRating value="2.5"/></Divider>
-                        </Typography>
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="h5"
-                            href=""
-                            sx={{mb:4}}
-                        >
-                            My Interest
-                        </Typography>
-                        <DonutChart />
-                    </Paper>
-                </Grid>
             </Grid>
+            <Grid
+                container
+                Wrap
+                direction="row"
+                justifyContent="space-evenly"
+                alignItems="stretch"
+                sx={{ m: 5, p: 5 }}
+            >
+
+                <Box>
+                    <div id="img">
+                        <img src={picture} id='img'
+
+                            style={{ width: 300, height: 250, borderRadius: 15, margin: 5 }} />
+
+                    </div>
+                    <Typography
+                        variant="p"
+                        Wrap
+                        component="p"
+                        href=""
+                        align='center'
+                        sx={{ p: 2 }}
+                    >
+
+                        <h4>Name: </h4>
+                        Nikola Grgurević
+
+                        <h4>Education: </h4>Bachelor of Information Technology
+
+                        <h4>Date of Birth: </h4>19.06.1992
+
+                        <h4>Location: </h4>Zagreb
+
+                        <h4>Hobbies: </h4>Cycling,Swimming 
+
+                        <h4>Pets: </h4> 2 Dogs
+                    </Typography>
+
+                </Box>
+
+                <Box>
+                    <Typography
+                        variant="h2"
+                        Wrap
+                        component="h2"
+                        href=""
+                    >
+                        Interest<br />
+                    </Typography>
+                    <Typography
+                        variant="p"
+                        Wrap
+                        component="p"
+                        href=""
+                        align="center"
+                    >
+                        <Divider sx={{ my: 5, borderBottom: 1 }}>
+                            React <StarRating value="4" /> </Divider>
+                        <Divider sx={{ my: 5, borderBottom: 1 }}>
+                            JavaScript <StarRating value="3.5" /></Divider>
+                        <Divider sx={{ my: 5, borderBottom: 1 }}>
+                            Kotlin<StarRating value="3.5" /> </Divider>
+                        <Divider sx={{ my: 5, borderBottom: 1 }}>
+                            Swift <StarRating value="3" /></Divider>
+                        <Divider sx={{ my: 5, borderBottom: 1 }}>
+                            Java<StarRating value="2.5" /></Divider>
+                    </Typography>
+                    <Typography
+                        variant="h5"
+                        Wrap
+                        component="h5"
+                        href=""
+                        sx={{ mb: 4 }}
+                    >
+                        My Interest
+                    </Typography>
+                    <DonutChart />
+                </Box>
+
+            </Grid>
+        </Grid>
+</Paper>
     )
 }
 

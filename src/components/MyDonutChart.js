@@ -5,7 +5,7 @@ const reactDonutChartdata = [
   {
     label: "React",
     value: 150,
-    color: COLORS.secondary_dark
+    color: COLORS.white
   },
   {
     label: "JavaScript",
@@ -42,7 +42,7 @@ const reactDonutChartHandleClick = (item, toggled) => {
     console.log(item);
   }
 };
-let reactDonutChartStrokeColor = COLORS.secondary_dark;
+let reactDonutChartStrokeColor = COLORS.black;
 const reactDonutChartOnMouseEnter = (item) => {
   let color = reactDonutChartdata.find((q) => q.label === item.label).color;
   reactDonutChartStrokeColor = color;

@@ -18,35 +18,33 @@ export const lightTheme = createTheme({
           backgroundColor: COLORS.primary_light,
           color: COLORS.black,
           
+          
         },primary:{
           main: COLORS.primary,
           light: COLORS.primary_light
         },
-        sx: ({
-          p: 5
-        })
+        
       },
+      
     },
     MuiTypography: {
       styleOverrides: {
         root: {
-
+          Wrap: true,
         },
         h1: {
           fontSize: 80,
-          fontFamily: 'sans-serif'
+          
         },
         p: {
-          fontSize: 24,
+          fontSize: 25,
         },
         h2: {
-          fontSize: 50,
-          fontFamily: 'sans-serif'
+          fontSize: 65,
         }
         
       },
     },
-
   },
   breakpoints: {
     value:
@@ -84,16 +82,19 @@ export const darkTheme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-
+          Wrap: true,
         },
         h1: {
           fontSize: 80,
-          fontFamily: 'sans-serif'
+          
         },
         p: {
-          fontSize: 24,
+          fontSize: 25,
+        },
+        h2: {
+          fontSize: 65,
         }
-
+        
       },
       components: {
 

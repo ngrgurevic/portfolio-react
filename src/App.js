@@ -56,10 +56,7 @@ function App() {
            />
         <About />
         {/* sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }}  */}
-        <Paper sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }}>
-
-          <AboutMe />
-        </Paper>    
+          <AboutMe />    
         <Footer/>
         <CopyrightComponent/>
       </div>

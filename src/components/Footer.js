@@ -1,7 +1,6 @@
-import { Box, Grid, Paper, Typography, Divider, Stack, Link } from '@mui/material'
-import React, { Children } from 'react'
+import { Grid, Paper, Typography,Stack, Link } from '@mui/material'
+import React from 'react'
 import COLORS from './colors'
-import darkCheck from './darkCheck'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../App.css'
@@ -10,7 +9,7 @@ import Timer from './Timer'
 export default function Footer() {
     return (
         <Paper sx={{
-            mx: 0, mt: 2, borderTop: 5, justifyContent: 'center',
+            mx: 0, mt: 2, borderTop: 4, display: 'center',
             boxShadow: '10', opacity: 0.9
         }}>
             <Grid container
@@ -20,7 +19,7 @@ export default function Footer() {
 
 
                     <Typography variant="h4"
-                        noWrap
+                        Wrap
                         component="h4"
                         href=""
                         align='center'
@@ -31,7 +30,7 @@ export default function Footer() {
                     </Typography>
                     <Typography
                         variant="p"
-                        noWrap
+                        Wrap
                         component="p"
                         href=""
                         align='center'
@@ -45,16 +44,15 @@ export default function Footer() {
 
 
                 </Grid>
-                <Grid xs={6} >
+                <Grid md={6} sx={{ width: '100%',  pb:3 }}>
 
                     <Typography variant="h4"
-                        noWrap
+                        Wrap
                         component="h4"
                         href=""
                         align='center'
                         sx={{pt:4, pb:3}}
                         >
-                        
                             Links
                     </Typography>
 
@@ -62,7 +60,7 @@ export default function Footer() {
                         direction="row-reverse"
                         justifyContent="center"
                         alignItems="center"
-                        spacing={5}
+                        spacing={6}
 
                     >
                         
@@ -78,9 +76,6 @@ export default function Footer() {
                             />
                         </Link>
                     </Stack>
-
-
-
                 </Grid>
             </Grid>
         </Paper>
