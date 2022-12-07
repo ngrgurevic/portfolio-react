@@ -16,12 +16,14 @@ import '../App.css'
 import HideAppBar from "./HideOnScroll";
 import AboutMe from "./AboutMe";
 import Footer from "./Footer";
-import { Link } from "@mui/material";
+import { Grid, Link } from "@mui/material";
+import MySwitch from "./MySwitch";
 
 const pages = ['About', 'Projects', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function Header() {
+function Header({ darkMode, setDarkMode }) {
+
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -40,10 +42,10 @@ function Header() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
+
   return (
     <HideAppBar>
-       <AppBar position="fixed" sx={{mb:1}}>
+      <AppBar position="fixed" sx={{ mb: 1 }}>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mx: 2 }} />
           <Typography
@@ -119,26 +121,39 @@ function Header() {
           >
             Portfolio
           </Typography>
-          <Box sx={{ flexGrow: 1, mx:3 , display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                component={Link}
-                to={'../App'}
-                key={page}
-                
-                sx={{ mx: 2, color: 'white', display: 'block', "&:hover": {
-                  color: 'white',
-                  backgroundColor: COLORS.primary_light,
-                  transition: 'ease-in',
-                } }}
-              > 
-                {page}
-              </Button>
-            ))}
+          <Box sx={{ flexGrow: 1, mx: 3, display: { xs: 'none', md: 'flex' } }}>
+            <Grid container direction="row" sx={{ width: { lg: "400px", md: "350px" } }}>
+              {pages.map((page) => (
+                <Grid item xs>
+                  <Button
+                    component={Link}
+                    to="#about"
+                    key={page}
+
+                    sx={{
+                      mx: 2, color: 'white', display: 'block', "&:hover": {
+                        color: 'white',
+                        backgroundColor: COLORS.primary_light,
+                        transition: 'ease-in',
+                      }
+                    }}
+                  >
+                    {page}
+                  </Button>
+                </Grid>
+              ))}
+              <Grid item xs>
+              </Grid>
+            </Grid>
           </Box>
+          <MySwitch darkMode={darkMode}
+            setDarkMode={() => {
+              setDarkMode(!darkMode)
+            }}
+          />
         </Toolbar>
-    </AppBar>
-      </HideAppBar>
+      </AppBar>
+    </HideAppBar >
   );
 
 }

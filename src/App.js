@@ -3,7 +3,7 @@ import Header from './components/Header'
 import About from './components/Welcome'
 import React, { createContext, useState, useEffect } from 'react'
 import COLORS from './components/colors';
-import { ThemeProvider, createTheme,useTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Switch, Divider, Box, Tooltip, Paper } from '@mui/material';
 import ParticlesBg from 'particles-bg';
@@ -30,7 +30,7 @@ const style = {
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  
+
 
   return (
     <ThemeProvider theme={darkCheck(darkMode)}>
@@ -43,22 +43,21 @@ function App() {
       <div className="App">
 
         <br />
-       
 
-        <Header>
+
+        <Header darkMode={darkMode}
+          setDarkMode={() => {
+            setDarkMode(!darkMode)
+          }}>
           {/* <Switch checked={darkMode}
             onChange={() => setDarkMode(!darkMode)} /> */}
-            
-       </Header>
-       <MySwitch darkMode={darkMode}
-            setDarkMode={() => {
-              setDarkMode(!darkMode)}}
-           />
-        <About />
+
+        </Header>
+        <About id="about" />
         {/* sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }}  */}
-          <AboutMe />    
-        <Footer/>
-        <CopyrightComponent/>
+        <AboutMe />
+        <Footer />
+        <CopyrightComponent />
       </div>
     </ThemeProvider>
   );

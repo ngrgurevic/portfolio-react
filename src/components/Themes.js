@@ -17,15 +17,15 @@ export const lightTheme = createTheme({
         root: {
           backgroundColor: COLORS.primary_light,
           color: COLORS.black,
-          
-          
-        },primary:{
+
+
+        }, primary: {
           main: COLORS.primary,
           light: COLORS.primary_light
         },
-        
+
       },
-      
+
     },
     MuiTypography: {
       styleOverrides: {
@@ -34,7 +34,7 @@ export const lightTheme = createTheme({
         },
         h1: {
           fontSize: 80,
-          
+
         },
         p: {
           fontSize: 25,
@@ -42,7 +42,7 @@ export const lightTheme = createTheme({
         h2: {
           fontSize: 65,
         }
-        
+
       },
     },
   },
@@ -54,7 +54,7 @@ export const lightTheme = createTheme({
 });
 
 export const darkTheme = createTheme({
-  root:{
+  root: {
     palette: {
       mode: "dark"
     },
@@ -86,7 +86,7 @@ export const darkTheme = createTheme({
         },
         h1: {
           fontSize: 80,
-          
+
         },
         p: {
           fontSize: 25,
@@ -94,7 +94,7 @@ export const darkTheme = createTheme({
         h2: {
           fontSize: 65,
         }
-        
+
       },
       components: {
 
@@ -102,5 +102,5 @@ export const darkTheme = createTheme({
     },
   },
 });
-    
+
 
