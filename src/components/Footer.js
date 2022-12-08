@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography,Stack, Link } from '@mui/material'
+import { Grid, Paper, Typography, Stack, Link } from '@mui/material'
 import React from 'react'
 import COLORS from './colors'
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -14,19 +14,16 @@ export default function Footer() {
         }}>
             <Grid container
                 rowSpacing={2} >
-
-                <Grid md={6} sx={{ width: '100%',  pb:3 }} >
-
-
+                <Grid md={6} sx={{ width: '100%', pb: 3 }} >
                     <Typography variant="h4"
                         Wrap
                         component="h4"
                         href=""
                         align='center'
-                        sx={{pt:4}}
-                        >
-                        
-                            Contact
+                        sx={{ pt: 4 }}
+                    >
+
+                        Contact
                     </Typography>
                     <Typography
                         variant="p"
@@ -34,25 +31,25 @@ export default function Footer() {
                         component="p"
                         href=""
                         align='center'
-                        sx={{pt:1}}
+                        sx={{ pt: 1 }}
                     >
-                        <Timer/>
+                        <Timer />
                         Email: nikolagrgurevic92@gmail.com
-                        
+
                     </Typography>
 
 
                 </Grid>
-                <Grid md={6} sx={{ width: '100%',  pb:3 }}>
+                <Grid md={6} sx={{ width: '100%', pb: 3 }}>
 
                     <Typography variant="h4"
                         Wrap
                         component="h4"
                         href=""
                         align='center'
-                        sx={{pt:4, pb:3}}
-                        >
-                            Links
+                        sx={{ pt: 4, pb: 3 }}
+                    >
+                        Links
                     </Typography>
 
                     <Stack
@@ -62,16 +59,16 @@ export default function Footer() {
                         spacing={6}
 
                     >
-                        
+
                         <Link href='https://github.com/ngrgurevic'>
-                            <GitHubIcon sx={{width:50,height:50, color:COLORS.secondary_light}}
+                            <GitHubIcon sx={{ width: 50, height: 50, color: COLORS.secondary_light }}
                                 color={COLORS.secondary_light}
                             />
                         </Link>
 
                         <Link href='https://www.linkedin.com/in/nikola-grgurevic-0782511b2'>
-                            <LinkedInIcon sx={{width:50,height:50, color:COLORS.secondary_light}}
-                                
+                            <LinkedInIcon sx={{ width: 50, height: 50, color: COLORS.secondary_light }}
+
                             />
                         </Link>
                     </Stack>

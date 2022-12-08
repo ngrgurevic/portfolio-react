@@ -74,7 +74,6 @@ function AboutMe() {
                                 <h4>Hobbies: </h4>Cycling,Swimming
 
                                 <h4>Pets: </h4>
-
                             </Typography>
                             <Box  sx={{px: 2,mx:2, display: 'flex', justifyContent: 'center' , alignContent:'center' }}>
                                 <Avatar src={one} sx={{ width: 100, height: 100, opacity: 1,m:2 }} />
