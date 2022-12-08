@@ -37,7 +37,6 @@ export default function Footer() {
                         sx={{pt:1}}
                     >
                         <Timer/>
-                        Phone: +385977645232<br/>
                         Email: nikolagrgurevic92@gmail.com
                         
                     </Typography>
