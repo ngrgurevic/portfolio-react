@@ -48,7 +48,7 @@ export const lightTheme = createTheme({
   },
   breakpoints: {
     value:
-      { xs: 0, sm: 600, md: 960, lg: 1280, xl: 1920 }
+      { xs: 580, sm: 600, md: 960, lg: 1280, xl: 1920 }
   }
 
 });

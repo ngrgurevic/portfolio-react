@@ -12,7 +12,7 @@ function AboutMe() {
     const theme = useTheme()
     return (
         <Paper sx={{
-            mx: 5, my: 5, borderTop: 4, borderBottom: 4, display: 'center',
+            mx: 10, my: 10, borderTop: 4, borderBottom: 4, display: 'center',
             boxShadow: '0', opacity: 0.9, borderRadius: 20
         }}>
                 <Grid spacing={2}
@@ -46,7 +46,7 @@ function AboutMe() {
                         alignItems="stretch"
                     >
 
-                        <Grid item lg={6} sm={12}>
+                        <Grid item xs={12} lg={6} sm={12}>
                             <div id="img">
                                 <img src={picture} id='img'
 
@@ -59,7 +59,7 @@ function AboutMe() {
                                 component="p"
                                 href=""
                                 align='center'
-                                sx={{ p: 2 }}
+                                sx={{ p: 1 }}
                             >
 
                                 <h4>Name: </h4>
@@ -76,18 +76,20 @@ function AboutMe() {
                                 <h4>Pets: </h4>
 
                             </Typography>
-                            <Box sx={{ mx: 5, px: 2, display: 'flex', justifyContent: 'space-around' }}>
-                                <Avatar src={one} sx={{ width: 125, height: 125, opacity: 1 }} />
+                            <Box  sx={{px: 1, display: 'flex', justifyContent: 'center' , alignContent:'center' }}>
+                                <Avatar src={one} sx={{ width: 70, height: 70, opacity: 1,mb:1,mt:1 }} />
 
-                                <Avatar sx={{ width: 125, height: 125, opacity: 1 }} src={two} />  </Box>
+                                <Avatar sx={{ width: 70, height: 70, opacity: 1,mb:1,mt:1 }} src={two} />  
+                            </Box>
                         </Grid>
 
-                        <Grid item lg={6} sm={12}>
+                        <Grid Wrap item xs={12} lg={6} sm={12}>
                             <Typography
                                 variant="h2"
                                 Wrap
                                 component="h2"
                                 href=""
+                                sx={{ p: 2,my:2 }}
                             >
                                 Interest<br />
                             </Typography>
@@ -97,8 +99,9 @@ function AboutMe() {
                                 component="p"
                                 href=""
                                 align="center"
+                                sx={{ p: 1 }}
                             >
-                                <Divider sx={{ my: 5, borderBottom: 1 }}>
+                                <Divider sx={{ my: 5, borderBottom: 1,wrap:true }}>
                                     React <StarRating value="4" /> </Divider>
                                 <Divider sx={{ my: 5, borderBottom: 1 }}>
                                     JavaScript <StarRating value="3.5" /></Divider>
@@ -109,17 +112,11 @@ function AboutMe() {
                                 <Divider sx={{ my: 5, borderBottom: 1 }}>
                                     Java<StarRating value="2.5" /></Divider>
                             </Typography>
-                            <Typography
-                                variant="h5"
-                                Wrap
-                                component="h5"
-                                href=""
-                                sx={{ mb: 4 }}
-                            >
-                                My Interest
-                            </Typography>
-                            <DonutChart />
+                            
+                            <DonutChart Wrap sx={{wrap:true}} />
+                            
                         </Grid>
+                       
                     </Grid>
                 </Grid>
         </Paper>

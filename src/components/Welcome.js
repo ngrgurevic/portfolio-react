@@ -14,7 +14,7 @@ import '../App.css'
 
 function Welcome() {
  return(
-        <Box sx={{my:10}}>
+        <Box sx={{my:5,p:5}}>
         <Typography
               variant="h1"
               Wrap
