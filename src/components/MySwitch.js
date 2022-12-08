@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 function MySwitch({ darkMode, setDarkMode }) {
 
   return (
-    <Box sx={{mr:"15px"}}>
+    <Box sx={{mr:5,ml:5}}>
       <Tooltip describeChild title={darkMode ? "darkTheme" : "lightTheme"}>
         <DarkModeSwitch
           checked={darkMode}
