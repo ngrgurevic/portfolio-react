@@ -79,7 +79,7 @@ function AboutMe() {
                             <Box  sx={{px: 2,mx:2, display: 'flex', justifyContent: 'center' , alignContent:'center' }}>
                                 <Avatar src={one} sx={{ width: 100, height: 100, opacity: 1,m:2 }} />
 
-                                <Avatar sx={{ width: 100, height: 100, opacity: 1,m:1}} src={two} />  
+                                <Avatar sx={{ width: 100, height: 100, opacity: 1,m:2}} src={two} />  
                             </Box>
                         </Grid>
 
