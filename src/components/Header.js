@@ -97,11 +97,24 @@ function Header({ darkMode, setDarkMode }) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              
+                <MenuItem key={pages} onClick={handleCloseNavMenu}>
+                  <ScrollButton 
+                name='Home'
+                topPosition={0}
+                />
+               
+                <ScrollButton 
+                name='About Me'
+                topPosition={900}
+                />
+                
+                <ScrollButton 
+                name='Contact'
+                topPosition={15000}
+                />
                 </MenuItem>
-              ))}
+            
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />

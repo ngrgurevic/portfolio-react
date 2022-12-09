@@ -14,7 +14,7 @@ const ScrollButton = ({topPosition,name}) => {
 
   return (
     <div>
-     <Button variant="contained" color="primary" onClick={handleClick} sx={{mx:2,p:1}}>{name}</Button>
+     <Button variant="contained" color="primary" onClick={handleClick} sx={{mx:1,px:1}}>{name}</Button>
     </div>
   );
 };
