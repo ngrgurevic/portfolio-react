@@ -18,12 +18,14 @@ import AboutMe from "./AboutMe";
 import Footer from "./Footer";
 import { Grid, Link } from "@mui/material";
 import MySwitch from "./MySwitch";
+import App from '../App'
+import ScrollButton from "./ScrollButton";
+
 
 const pages = ['About', 'Projects', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header({ darkMode, setDarkMode }) {
-
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -121,9 +123,29 @@ function Header({ darkMode, setDarkMode }) {
           >
             Portfolio
           </Typography>
-          <Box sx={{ flexGrow: 1, mx: 3, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, mx: 1, display: { xs: 'none', md: 'flex' } }}>
             <Grid container direction="row" sx={{ width: { lg: "400px", md: "350px" } }}>
-              {pages.map((page) => (
+
+              <Grid item direction="row" container >
+                
+                <ScrollButton 
+                name='Home'
+                topPosition={0}
+                />
+               
+                <ScrollButton 
+                name='About Me'
+                topPosition={800}
+                />
+                
+                <ScrollButton 
+                name='Contact'
+                topPosition={10000}
+                />
+             </Grid>
+
+
+              {/* {pages.map((page) => (
                 <Grid item xs>
                   <Button
                     component={Link}
@@ -141,7 +163,7 @@ function Header({ darkMode, setDarkMode }) {
                     {page}
                   </Button>
                 </Grid>
-              ))}
+              ))} */}
               <Grid item xs>
               </Grid>
             </Grid>
@@ -155,7 +177,11 @@ function Header({ darkMode, setDarkMode }) {
       </AppBar>
     </HideAppBar >
   );
+  function scrolldiv() {
+    const titleElement = document.getElementById('about')
+    titleElement.scrollIntoView({ behavior: 'smooth' })
 
+  }
 }
 
 
