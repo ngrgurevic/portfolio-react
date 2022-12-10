@@ -5,6 +5,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../App.css'
 import Timer from './Timer'
+import EmailIcon from '@mui/icons-material/Email';
+import MailIcon from '@mui/icons-material/Mail';
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
+import WatchIcon from '@mui/icons-material/Watch';
 
 export default function Footer() {
     return (
@@ -33,10 +37,14 @@ export default function Footer() {
                         align='center'
                         sx={{ pt: 1 }}
                     >
+                        <WatchIcon sx={{pt:3, width:45,height:45}}/>
                         <Timer />
-                        Email: nikolagrgurevic92@gmail.com
-
+                        
+                        <EmailIcon sx={{pt:3, width:45,height:45}}/> 
+                       Email: nikolagrgurevic92@gmail.com
+                        
                     </Typography>
+                    
 
 
                 </Grid>

@@ -47,7 +47,7 @@ function Header({ darkMode, setDarkMode }) {
 
   return (
     <HideAppBar>
-      <AppBar position="fixed" sx={{ mb: 1 }}>
+      <AppBar position="fixed" sx={{ mb: 1,  display: { xs: 'inherit', md: 'flex' } }}>
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mx: 2 }} />
           <Typography
@@ -114,7 +114,6 @@ function Header({ darkMode, setDarkMode }) {
                 topPosition={15000}
                 />
                 </MenuItem>
-            
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -157,26 +156,6 @@ function Header({ darkMode, setDarkMode }) {
                 />
              </Grid>
 
-
-              {/* {pages.map((page) => (
-                <Grid item xs>
-                  <Button
-                    component={Link}
-                    to="#about"
-                    key={page}
-
-                    sx={{
-                      mx: 2, color: 'white', display: 'block', "&:hover": {
-                        color: 'white',
-                        backgroundColor: COLORS.primary_light,
-                        transition: 'ease-in',
-                      }
-                    }}
-                  >
-                    {page}
-                  </Button>
-                </Grid>
-              ))} */}
               <Grid item xs>
               </Grid>
             </Grid>
@@ -190,11 +169,6 @@ function Header({ darkMode, setDarkMode }) {
       </AppBar>
     </HideAppBar >
   );
-  function scrolldiv() {
-    const titleElement = document.getElementById('about')
-    titleElement.scrollIntoView({ behavior: 'smooth' })
-
-  }
 }
 
 
