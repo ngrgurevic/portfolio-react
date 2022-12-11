@@ -23,13 +23,13 @@ function Welcome() {
           Wrap
           component="h1"
           href=""
-          sx={{ my: 15 }}
+          sx={{ my: 13 }}
         >
           Welcome to my Portfolio
         </Typography>
       </MovingComponent>
 
-      <HomeIcon sx={{ my: 7, width: 50, height: 50 }}
+      <HomeIcon sx={{ my: 10, width: 50, height: 50 }}
       />
 
       <MovingComponent
@@ -46,7 +46,7 @@ function Welcome() {
           Wrap
           component="h4"
           href=""
-          sx={{ mb: 5 }}
+          sx={{ mb: 1 }}
         >
           I'm a Web and Mobile developer
         </Typography>

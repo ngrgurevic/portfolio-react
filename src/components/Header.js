@@ -20,10 +20,10 @@ import { Grid, Link } from "@mui/material";
 import MySwitch from "./MySwitch";
 import App from '../App'
 import ScrollButton from "./ScrollButton";
+import AoSEffect from "./AoSEffect";
 
 
 const pages = ['About', 'Projects', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header({ darkMode, setDarkMode }) {
 
@@ -116,7 +116,9 @@ function Header({ darkMode, setDarkMode }) {
                 </MenuItem>
             </Menu>
           </Box>
+         
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+         
           <Typography
             variant="h5"
             noWrap
@@ -137,7 +139,10 @@ function Header({ darkMode, setDarkMode }) {
           </Typography>
           <Box sx={{ flexGrow: 1, mx: 1, display: { xs: 'none', md: 'flex' } }}>
             <Grid container direction="row" sx={{ width: { lg: "400px", md: "350px" } }}>
-
+            <AoSEffect 
+              animation={'fade-down'}
+              duration={1000}
+            >
               <Grid item direction="row" container >
                 
                 <ScrollButton 
@@ -147,24 +152,28 @@ function Header({ darkMode, setDarkMode }) {
                
                 <ScrollButton 
                 name='About Me'
-                topPosition={810}
+                topPosition={860}
                 />
                 
                 <ScrollButton 
                 name='Contact'
                 topPosition={10000}
                 />
+                
              </Grid>
-
-              <Grid item xs>
-              </Grid>
+             </AoSEffect>
             </Grid>
           </Box>
+          <AoSEffect 
+              animation={'fade-left'}
+              duration={1000}
+            >
           <MySwitch darkMode={darkMode}
             setDarkMode={() => {
               setDarkMode(!darkMode)
             }}
           />
+          </AoSEffect>
         </Toolbar>
       </AppBar>
     </HideAppBar >

@@ -7,6 +7,7 @@ import DonutChart from './MyDonutChart';
 import one from '../images/1.jpeg'
 import two from '../images/2.jpeg'
 import MovingComponent from 'react-moving-text'
+import AoSEffect from './AoSEffect'
 
 
 function AboutMe() {
@@ -25,16 +26,10 @@ function AboutMe() {
             >
 
                 <Grid xs={12} spacing={1}>
-
-
-                    <MovingComponent
-                        type="squeezeHorizontal"
-                        duration="1500ms"
-                        delay="5s"
-                        direction="normal"
-                        timing="ease"
-                        iteration="1"
-                        fillMode="none">
+                    <AoSEffect
+                    animation={'slide-left'}
+                    duration={3000}
+                    >
                         <Typography
                             variant="h2"
                             Wrap
@@ -46,8 +41,8 @@ function AboutMe() {
                             About me
 
                         </Typography>
-                    </MovingComponent>
-
+                    
+                    </AoSEffect>
 
                 </Grid>
                 <Grid
@@ -60,12 +55,18 @@ function AboutMe() {
                 >
 
                     <Grid item xs={12} lg={6} sm={12}>
+                        
+                    <AoSEffect
+                    animation={'slide-up'}
+                    duration={3000}
+                    >
                         <div id="img">
                             <img src={picture} id='img'
 
                                 style={{ maxWidth: 300, borderRadius: 15, margin: 2 }} />
 
                         </div>
+                        
                         <Typography
                             variant="p"
                             Wrap
@@ -93,9 +94,15 @@ function AboutMe() {
 
                             <Avatar sx={{ width: 100, height: 100, opacity: 1, m: 2 }} src={two} />
                         </Box>
+
+                        </AoSEffect>
                     </Grid>
 
                     <Grid Wrap item xs={12} lg={6} sm={12}>
+                    <AoSEffect
+                    animation={'slide-up'}
+                    duration={3000}
+                    >
                         <Typography
                             variant="h2"
                             Wrap
@@ -126,7 +133,7 @@ function AboutMe() {
                         </Typography>
 
                         <DonutChart Wrap sx={{ wrap: true }} />
-
+                        </AoSEffect>
                     </Grid>
 
                 </Grid>

@@ -41,13 +41,16 @@ function App() {
           }}>
 
         </Header>
-
+        
         <About id="about" />
 
         <AoSEffect
           animation={'zoom-in-up'}
           duration={2000}
-        ><AboutMe /></AoSEffect>
+        >
+          <AboutMe />
+        
+        </AoSEffect>
 
 
         <AoSEffect
