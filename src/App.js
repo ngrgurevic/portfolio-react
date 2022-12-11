@@ -10,6 +10,9 @@ import ParticlesConfig from './components/ParticlesConfig'
 import Footer from './components/Footer'
 import { darkTheme, lightTheme } from './components/Themes';
 import CopyrightComponent from './components/CopyrightComponent'
+import 'aos/dist/aos.css';
+import AoSEffect from './components/AoSEffect';
+
 
 const style = {
   minHeight: "50%",
@@ -20,12 +23,9 @@ const style = {
 };
 
 
-
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-
-
   return (
     <ThemeProvider theme={darkCheck(darkMode)}>
 
@@ -35,23 +35,30 @@ function App() {
       <CssBaseline />
 
       <div className="App">
-
-        <br />
-
-
         <Header darkMode={darkMode}
           setDarkMode={() => {
             setDarkMode(!darkMode)
           }}>
-          {/* <Switch checked={darkMode}
-            onChange={() => setDarkMode(!darkMode)} /> */}
 
         </Header>
+
         <About id="about" />
-        {/* sx={{ opacity:0.9, mx: 5, my: 5, border: 5, px: 5, py: 5 }}  */}
-        <AboutMe />
-        <Footer />
-        <CopyrightComponent />
+
+        <AoSEffect
+          animation={'zoom-in-up'}
+          duration={2000}
+        ><AboutMe /></AoSEffect>
+
+
+        <AoSEffect
+          animation={'fade-down'}
+          duration={1000}
+        >
+          <Footer />
+          <CopyrightComponent />
+
+        </AoSEffect>
+
       </div>
     </ThemeProvider>
   );

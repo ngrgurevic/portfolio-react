@@ -2,8 +2,6 @@ import { Button } from '@mui/material';
 import React, { useRef } from 'react';
 
 const ScrollButton = ({topPosition,name}) => {
-  const myDiv = useRef(null);
-
   const handleClick = () => {
     window.scrollTo({
       top: topPosition,

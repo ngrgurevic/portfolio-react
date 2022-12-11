@@ -7,7 +7,7 @@ import MovingComponent from 'react-moving-text'
 
 function Welcome() {
   return (
-    <Box sx={{ my: 13, p: 5 }}>
+    <Box sx={{ my: 15, p: 5 }}>
 
       <MovingComponent
         type="unfold"

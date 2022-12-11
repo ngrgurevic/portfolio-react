@@ -11,7 +11,7 @@ function MySwitch({ darkMode, setDarkMode }) {
         <DarkModeSwitch
           checked={darkMode}
           onChange={setDarkMode}
-          size={30}
+          size={35}
         />
       </Tooltip>
     </Box>

@@ -147,7 +147,7 @@ function Header({ darkMode, setDarkMode }) {
                
                 <ScrollButton 
                 name='About Me'
-                topPosition={800}
+                topPosition={810}
                 />
                 
                 <ScrollButton 
