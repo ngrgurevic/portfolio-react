@@ -6,7 +6,6 @@ import StarRating from './StarRating'
 import DonutChart from './MyDonutChart';
 import one from '../images/1.jpeg'
 import two from '../images/2.jpeg'
-import MovingComponent from 'react-moving-text'
 import AoSEffect from './AoSEffect'
 
 

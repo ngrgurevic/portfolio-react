@@ -2,26 +2,18 @@ import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Avatar from '@mui/material/Avatar'
-import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import COLORS from './colors'
 import '../App.css'
 import HideAppBar from "./HideOnScroll";
-import AboutMe from "./AboutMe";
-import Footer from "./Footer";
 import { Grid, Link } from "@mui/material";
 import MySwitch from "./MySwitch";
-import App from '../App'
 import ScrollButton from "./ScrollButton";
 import AoSEffect from "./AoSEffect";
-
 
 const pages = ['About', 'Projects', 'Contact'];
 

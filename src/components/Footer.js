@@ -6,8 +6,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../App.css'
 import Timer from './Timer'
 import EmailIcon from '@mui/icons-material/Email';
-import MailIcon from '@mui/icons-material/Mail';
-import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import WatchIcon from '@mui/icons-material/Watch';
 
 export default function Footer() {
