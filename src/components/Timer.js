@@ -12,10 +12,10 @@ function Timer() {
         setTime(time);
     }
     return (
-    <Typography variant="p">
-       Time: {Time}
-       <br/>
-    </Typography>
+        <Typography variant="p">
+            Time: {Time}
+            <br />
+        </Typography>
     )
 }
 

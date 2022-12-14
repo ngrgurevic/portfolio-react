@@ -10,7 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import '../App.css'
 import HideAppBar from "./HideOnScroll";
-import { Grid, Link } from "@mui/material";
+import { Grid } from "@mui/material";
 import MySwitch from "./MySwitch";
 import ScrollButton from "./ScrollButton";
 import AoSEffect from "./AoSEffect";
@@ -20,21 +20,13 @@ const pages = ['About', 'Projects', 'Contact'];
 function Header({ darkMode, setDarkMode }) {
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (

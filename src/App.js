@@ -1,8 +1,8 @@
 import './App.css';
 import Header from './components/Header'
 import About from './components/Welcome'
-import React, { createContext, useState, useEffect } from 'react'
-import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
+import React, { useState } from 'react'
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import ParticlesBg from 'particles-bg';
 import AboutMe from './components/AboutMe';
@@ -13,19 +13,9 @@ import CopyrightComponent from './components/CopyrightComponent'
 import 'aos/dist/aos.css';
 import AoSEffect from './components/AoSEffect';
 
-
-const style = {
-  minHeight: "50%",
-  minWidth: "50%",
-  textAlign: "center",
-  paddingTop: "5rem",
-
-};
-
-
 function App() {
-
   const [darkMode, setDarkMode] = useState(false);
+
   return (
     <ThemeProvider theme={darkCheck(darkMode)}>
 
@@ -41,7 +31,7 @@ function App() {
           }}>
 
         </Header>
-        
+
         <About id="about" />
 
         <AoSEffect
@@ -49,10 +39,8 @@ function App() {
           duration={2000}
         >
           <AboutMe />
-        
+
         </AoSEffect>
-
-
         <AoSEffect
           animation={'fade-down'}
           duration={1000}

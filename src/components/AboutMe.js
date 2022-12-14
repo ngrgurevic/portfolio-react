@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Paper, Grid, Box, Divider, useTheme, Avatar, Container } from '@mui/material'
+import { Typography, Paper, Grid, Box, Divider, Avatar} from '@mui/material'
 import '../App.css'
 import picture from '../images/Profile.gif'
 import StarRating from './StarRating'
@@ -8,9 +8,7 @@ import one from '../images/1.jpeg'
 import two from '../images/2.jpeg'
 import AoSEffect from './AoSEffect'
 
-
 function AboutMe() {
-    const theme = useTheme()
     return (
         <Paper sx={{
             mx: 10, my: 10, borderTop: 4, borderBottom: 4, display: 'center',
@@ -23,7 +21,6 @@ function AboutMe() {
                 justifyContent="center"
                 alignItems="center"
             >
-
                 <Grid xs={12} spacing={1}>
                     <AoSEffect
                     animation={'slide-left'}
@@ -40,9 +37,7 @@ function AboutMe() {
                             About me
 
                         </Typography>
-                    
                     </AoSEffect>
-
                 </Grid>
                 <Grid
                     item
@@ -61,7 +56,7 @@ function AboutMe() {
                     >
                         <div id="img">
                             <img src={picture} id='img'
-
+                                alt='main'
                                 style={{ maxWidth: 300, borderRadius: 15, margin: 2 }} />
 
                         </div>
@@ -89,9 +84,9 @@ function AboutMe() {
                             <h4>Pets: </h4>
                         </Typography>
                         <Box sx={{ px: 2, mx: 2, display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
-                            <Avatar src={one} sx={{ width: 100, height: 100, opacity: 1, m: 2 }} />
+                            <Avatar src={one} sx={{ width: 100, height: 100, opacity: 1, m: 2 }} alt='Roni'/>
 
-                            <Avatar sx={{ width: 100, height: 100, opacity: 1, m: 2 }} src={two} />
+                            <Avatar sx={{ width: 100, height: 100, opacity: 1, m: 2 }} src={two} alt='Loki' />
                         </Box>
 
                         </AoSEffect>
@@ -130,11 +125,9 @@ function AboutMe() {
                             <Divider sx={{ my: 5, borderBottom: 1 }}>
                                 Java<StarRating value="2.5" /></Divider>
                         </Typography>
-
                         <DonutChart Wrap sx={{ wrap: true }} />
                         </AoSEffect>
                     </Grid>
-
                 </Grid>
             </Grid>
         </Paper>

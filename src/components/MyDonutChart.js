@@ -10,7 +10,7 @@ const reactDonutChartdata = [
   {
     label: "JavaScript",
     value: 150,
-    color:  COLORS.secondary_dark
+    color: COLORS.secondary_dark
   },
   {
     label: "Kotlin",
@@ -50,16 +50,16 @@ const reactDonutChartOnMouseEnter = (item) => {
 
 function MyDonutChart() {
   return (
-      <DonutChart
-        width={500}
-        onMouseEnter={(item) => reactDonutChartOnMouseEnter(item)}
-        strokeColor={reactDonutChartStrokeColor}
-        data={reactDonutChartdata}
-        colors={reactDonutChartBackgroundColor}
-        innerRadius={reactDonutChartInnerRadius}
-        selectedOffset={reactDonutChartSelectedOffset}
-        onClick={(item, toggled) => reactDonutChartHandleClick(item, toggled)}
-      />
+    <DonutChart
+      width={500}
+      onMouseEnter={(item) => reactDonutChartOnMouseEnter(item)}
+      strokeColor={reactDonutChartStrokeColor}
+      data={reactDonutChartdata}
+      colors={reactDonutChartBackgroundColor}
+      innerRadius={reactDonutChartInnerRadius}
+      selectedOffset={reactDonutChartSelectedOffset}
+      onClick={(item, toggled) => reactDonutChartHandleClick(item, toggled)}
+    />
   );
 }
 export default MyDonutChart

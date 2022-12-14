@@ -35,16 +35,11 @@ export default function Footer() {
                         align='center'
                         sx={{ pt: 1 }}
                     >
-                        <WatchIcon sx={{pt:3, width:45,height:45}}/>
+                        <WatchIcon sx={{ pt: 3, width: 45, height: 45 }} />
                         <Timer />
-                        
-                        <EmailIcon sx={{pt:3, width:45,height:45}}/> 
-                       Email: nikolagrgurevic92@gmail.com
-                        
+                        <EmailIcon sx={{ pt: 3, width: 45, height: 45 }} />
+                        Email: nikolagrgurevic92@gmail.com
                     </Typography>
-                    
-
-
                 </Grid>
                 <Grid md={6} sx={{ width: '100%', pb: 3 }}>
 
@@ -65,7 +60,6 @@ export default function Footer() {
                         spacing={6}
 
                     >
-
                         <Link href='https://github.com/ngrgurevic'>
                             <GitHubIcon sx={{ width: 50, height: 50, color: COLORS.secondary_light }}
                                 color={COLORS.secondary_light}
@@ -74,7 +68,6 @@ export default function Footer() {
 
                         <Link href='https://www.linkedin.com/in/nikola-grgurevic-0782511b2'>
                             <LinkedInIcon sx={{ width: 50, height: 50, color: COLORS.secondary_light }}
-
                             />
                         </Link>
                     </Stack>

@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import React, { useRef } from 'react';
+import React from 'react';
 
 const ScrollButton = ({topPosition,name}) => {
   const handleClick = () => {

@@ -11,7 +11,6 @@ const StyledRating = styled(Rating)({
       color: COLORS.secondary_light,
     }
   });
-
 export default function StarRating(props) {
   return (
     <Box
@@ -29,7 +28,6 @@ export default function StarRating(props) {
         precision={0.5}
         emptyIcon={<FavoriteIcon style={{  color: COLORS.secondary_dark}} fontSize="inherit" />}
       />
-      
     </Box>
   );
 }
